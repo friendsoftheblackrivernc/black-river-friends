@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Gallery – Friends of the Black River NC</title>
+  <meta name="description" content="Photo gallery of the Black River NC ancient cypress forests and wildlife." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .gallery-item {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      border-radius: 4px;
+      background: var(--deep-forest);
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 0.75rem 1rem;
+      background: linear-gradient(to top, rgba(26,31,20,0.85) 0%, transparent 100%);
+      color: rgba(232,217,181,0.9);
+      font-size: 0.78rem;
+      font-family: 'Raleway', sans-serif;
+      font-style: italic;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .gallery-item:hover .gallery-caption { opacity: 1; }
+
+    .map-embed {
+      width: 100%;
+      height: 480px;
+      border: none;
+      border-radius: 4px;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Friends of the Black River NC</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="gallery.html">Image Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="section-inner">
+    <p class="section-label">Visual Journey</p>
+    <h1>Image Gallery</h1>
+    <div class="divider"></div>
+    <p style="color:rgba(232,217,181,0.75); max-width:600px;">Photography from the Black River's ancient forests and waters.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+
+    <p class="section-label">Photography</p>
+    <h2>The Black River in Images</h2>
+    <div class="divider"></div>
+    <p style="max-width:720px; margin-bottom:0.5rem;">
+      The following photographs capture the breathtaking beauty of the Black River's ancient cypress forests, blackwater streams, and rich wildlife. Photography courtesy of Mac Stone, Dan Griffin, and Alan Clark.
+    </p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://www.blackriverfriends.org/uploads/4/7/3/1/47314411/background-images/header-bg.jpg"
+             alt="Aerial view of the Black River swamp forest"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#1e2d1b,#2a4a5a)'" />
+        <div class="gallery-caption">Black River swamp forest — Photo copyright Mac Stone</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://www.blackriverfriends.org/uploads/4/7/3/1/47314411/published/macstone-200416-49329-large.jpg"
+             alt="Cypress trees rising from the Black River"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#2a4a5a,#1e2d1b)'" />
+        <div class="gallery-caption">Ancient bald cypress trees — Photo copyright Mac Stone</div>
+      </div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#1a2f1e,#0f1e28); display:flex; align-items:center; justify-content:center;">
+        <div style="text-align:center; padding:2rem; color:rgba(232,217,181,0.6);">
+          <div style="font-size:3rem; margin-bottom:1rem;">🌊</div>
+          <p style="font-family:'Raleway',sans-serif; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">Blackwater stream</p>
+        </div>
+      </div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#2a3a1a,#1a2f1e); display:flex; align-items:center; justify-content:center;">
+        <div style="text-align:center; padding:2rem; color:rgba(232,217,181,0.6);">
+          <div style="font-size:3rem; margin-bottom:1rem;">🦜</div>
+          <p style="font-family:'Raleway',sans-serif; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">Wildlife habitat</p>
+        </div>
+      </div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#1e2d1b,#3a2a1a); display:flex; align-items:center; justify-content:center;">
+        <div style="text-align:center; padding:2rem; color:rgba(232,217,181,0.6);">
+          <div style="font-size:3rem; margin-bottom:1rem;">🌿</div>
+          <p style="font-family:'Raleway',sans-serif; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">Floodplain forest</p>
+        </div>
+      </div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#0f1e28,#1a2f1e); display:flex; align-items:center; justify-content:center;">
+        <div style="text-align:center; padding:2rem; color:rgba(232,217,181,0.6);">
+          <div style="font-size:3rem; margin-bottom:1rem;">🛶</div>
+          <p style="font-family:'Raleway',sans-serif; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">Paddling & recreation</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:1.5rem; font-size:0.82rem; color:#7a6a55; font-style:italic;">
+      Photography copyright Mac Stone, Dan Griffin, and Alan Clark. All rights reserved.
+    </p>
+
+    <!-- Map -->
+    <div style="margin-top:4rem;">
+      <p class="section-label">Location</p>
+      <h2>Map of the Black River</h2>
+      <div class="divider"></div>
+      <p style="margin-bottom:0.5rem;">The Black River flows through Bladen, Pender, and Sampson Counties in southeastern North Carolina, joining the Cape Fear River near Wilmington.</p>
+
+      <iframe
+        class="map-embed"
+        title="Map of the Black River, North Carolina"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d209437.09!2d-78.0588!3d34.4782!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89aa35d9e5bfffff%3A0x93d45ee2e85bbd18!2sBlack%20River%2C%20NC!5e0!3m2!1sen!2sus!4v1700000000000"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">Friends of the Black River NC</p>
+        <p class="footer-desc">Dedicated to the long-term protection, security, and care of North Carolina's extraordinary Black River.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="learn.html">Learn More</a></li>
+          <li><a href="gallery.html">Image Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:9195006598">(919) 500-6598</a></li>
+          <li style="color:rgba(232,217,181,0.65); font-size:0.88rem;">PO Box 2<br />Currie, NC 28435</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Friends of the Black River NC. All rights reserved.</span>
+      <a href="https://www.conservationsouth.org/" target="_blank" rel="noopener">Southern Conservation Partners</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

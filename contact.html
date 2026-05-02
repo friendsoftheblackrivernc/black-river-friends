@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Friends of the Black River NC</title>
+  <meta name="description" content="Get in touch with Friends of the Black River NC." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Friends of the Black River NC</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="gallery.html">Image Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="section-inner">
+    <p class="section-label">Get in Touch</p>
+    <h1>Contact Us</h1>
+    <div class="divider"></div>
+  </div>
+</div>
+
+<section class="section contact-section">
+  <div class="section-inner">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <p class="section-label">Reach Out</p>
+        <h2>Join Our Coalition</h2>
+        <div class="divider"></div>
+        <p>
+          We would like to hear from you as we build our coalition of organizations, businesses, and individuals who hope to ensure long-term protection of North Carolina's <strong>Black River</strong> — its natural habitats, water quality, ancient forests, wildlife, and historic features.
+        </p>
+        <p>
+          Write to us and we'll add you to our list of <em>Friends</em>.
+        </p>
+        <p>
+          Are you a local landowner, someone who enjoys kayaking the river, or someone with other special interests? We'd love to connect.
+        </p>
+
+        <address class="address">
+          <strong>Friends of the Black River NC</strong><br />
+          PO Box 2<br />
+          Currie, NC 28435<br /><br />
+          <strong>Phone:</strong> <a href="tel:9195006598" style="color:var(--water-blue);">(919) 500-6598</a>
+        </address>
+
+        <div style="margin-top:2rem; padding:1.5rem; background:var(--deep-forest); border-radius:4px; color:var(--pale-reed);">
+          <p style="font-family:'Raleway',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">Support This Project</p>
+          <p style="font-size:0.9rem; color:rgba(232,217,181,0.85); line-height:1.65;">
+            Please consider a gift in support of this conservation effort. Our fiscal sponsor, <a href="https://www.conservationsouth.org/" target="_blank" rel="noopener" style="color:var(--reed-gold);">Southern Conservation Partners</a>, can receive donations on behalf of Friends of the Black River NC.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <p class="section-label">Send a Message</p>
+        <h2>Write to Us</h2>
+        <div class="divider"></div>
+
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div>
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required autocomplete="given-name" />
+            </div>
+            <div>
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required autocomplete="family-name" />
+            </div>
+          </div>
+
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+
+          <label for="comment">Comment *</label>
+          <textarea id="comment" name="comment" required placeholder="Tell us about your interest in the Black River…"></textarea>
+
+          <button type="submit">Send Message</button>
+
+          <p id="formMsg" style="display:none; margin-top:1rem; padding:1rem; border-radius:3px; font-family:'Raleway',sans-serif; font-size:0.88rem;"></p>
+        </form>
+
+        <p style="margin-top:1rem; font-size:0.8rem; color:#7a6a55; font-style:italic;">
+          * Indicates required field. This static form demonstrates the contact UI; for a live submission, connect a backend service such as Formspree or Netlify Forms.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">Friends of the Black River NC</p>
+        <p class="footer-desc">Dedicated to the long-term protection, security, and care of North Carolina's extraordinary Black River.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="learn.html">Learn More</a></li>
+          <li><a href="gallery.html">Image Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:9195006598">(919) 500-6598</a></li>
+          <li style="color:rgba(232,217,181,0.65); font-size:0.88rem;">PO Box 2<br />Currie, NC 28435</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Friends of the Black River NC. All rights reserved.</span>
+      <a href="https://www.conservationsouth.org/" target="_blank" rel="noopener">Southern Conservation Partners</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const msg = document.getElementById('formMsg');
+  msg.style.display = 'block';
+  msg.style.background = '#e8f5e9';
+  msg.style.color = '#1b5e20';
+  msg.style.border = '1px solid #a5d6a7';
+  msg.textContent = 'Thank you for your message! To enable live form submissions, connect this form to a service like Formspree (formspree.io) or Netlify Forms.';
+}
+</script>
+</body>
+</html>
