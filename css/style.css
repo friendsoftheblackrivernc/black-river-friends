@@ -61,8 +61,6 @@ nav {
   height: 44px;
   width: auto;
   display: block;
-  /* The logo has a black background — invert to white so it looks clean on the dark nav */
-  filter: brightness(0) invert(1);
 }
 
 .nav-links {
